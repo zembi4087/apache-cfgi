@@ -6,6 +6,8 @@
 
 FROM debian:jessie
 
+# Edit sources.list to add to install libapache2-mod-fastcgi
+RUN echo "deb http://http.us.debian.org/debian  main non-free" >> /etc/apt/sources.list
 # persistent / runtime deps
 ENV PHPIZE_DEPS \
 		autoconf \
